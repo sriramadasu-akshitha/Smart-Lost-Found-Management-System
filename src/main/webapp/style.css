@@ -1,0 +1,566 @@
+
+@charset "UTF-8";
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Landing_page.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: #102C3E;
+    min-height: 100vh;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    height: 88px;
+    width: 100%;
+    background: #102C3E;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 195px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.navigation a.active {
+    color: #f5ae4d;
+    border-bottom: 3px solid #f5ae4d;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.register-btn {
+    background: #F2A74C;
+    color: #102C3E;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: transparent;
+}
+
+
+/* LEFT CONTENT */
+
+.hero-content {
+    width: 52%;
+    padding: 50px 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* CAMPUS TAG */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #ffecd5;
+    color: #102f40;
+
+    padding: 10px 15px;
+    border-radius: 25px;
+
+    width: fit-content;
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tag-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* HEADING */
+
+.hero-content h1 {
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.12;
+    color: #102f40;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #eda64b;
+    margin-top: 5px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+    max-width: 620px;
+
+    font-size: 19px;
+    line-height: 1.55;
+
+    color: #526474;
+    margin-bottom: 24px;
+}
+
+
+/* REPORT BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.hero-buttons a {
+    width: 253px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-radius: 13px;
+    text-decoration: none;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.hero-buttons img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+
+/* LOST BUTTON */
+
+.lost-btn {
+    background-color: #102f40;
+    border: 2px solid #102f40;
+}
+
+.lost-btn:hover {
+    background-color: #1d4a60;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(16, 47, 64, 0.25);
+}
+
+
+/* FOUND BUTTON */
+
+.found-btn {
+    background-color: #35877C;
+    border: 2px solid #35877C;
+    color: white;
+}
+
+.found-btn:hover {
+    background-color: #286D64;
+    border-color: #286D64;
+}
+
+
+/* RIGHT SIDE */
+
+.hero-right {
+    width: 48%;
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 45px 3% 0 0;
+}
+
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    height: 68px;
+    background: white;
+    border: 1px solid #dce2e8;
+    border-radius: 15px;
+    padding: 6px 10px;
+    overflow: hidden;
+}
+
+.search-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 15px;
+    flex-shrink: 0;
+    filter: brightness(0);
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    background: transparent;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.search-btn {
+    width: 125px;
+    height: 56px;
+    background: #102f40;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background: #1d4a60;
+    border-color: #1d4a60;
+}
+
+
+/* CAMPUS ILLUSTRATION */
+
+.campus-image {
+    width: 100%;
+    height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.campus-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* FOOTER */
+
+.footer {
+    min-height: 110px;
+
+    background: #102C3E;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 3%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* FOOTER BRAND */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-logo {
+    width: 160px;
+    height: 55px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.footer-logo-section p {
+    font-size: 12px;
+    color: #c8d1d9;
+    margin-top: 0;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #58c4b3;
+}
+
+
+/* PRIVACY TEXT */
+
+.privacy {
+    font-size: 13px;
+    color: #c8d1d9;
+}
+
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .hero-content {
+        width: 52%;
+    }
+
+    .hero-right {
+        width: 48%;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 220px;
+    }
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 40px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-right {
+        width: 100%;
+        height: auto;
+        padding: 10px 6% 30px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .campus-image {
+        height: 300px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .footer-brand h2 {
+        justify-content: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .privacy {
+        text-align: center;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .search-box {
+        height: 58px;
+    }
+
+    .search-icon {
+        width: 22px;
+        height: 22px;
+        margin: 0 8px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-btn {
+        width: 90px;
+        height: 46px;
+        font-size: 14px;
+    }
+
+}
